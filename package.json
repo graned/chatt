@@ -1,0 +1,29 @@
+{
+  "name": "chatt",
+  "version": "1.0.0",
+  "description": "simple chatt build with nodejs and socket.io",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm t",
+    "start": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/graned/chatt.git"
+  },
+  "keywords": [
+    "chat"
+  ],
+  "author": "Eduardo Anaya (gran_ed@hotmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/graned/chatt/issues"
+  },
+  "homepage": "https://github.com/graned/chatt#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10",
+    "socket.io": "^2.2.0"
+  }
+}

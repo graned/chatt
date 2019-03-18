@@ -1,0 +1,35 @@
+{
+  "entities": [
+    {
+      "name": "Piece",
+      "props": ["name", "movement", "habilities"]
+    }
+  ],
+  "interactors": [
+    {
+      "name": "pieceInteractor",
+      "dependencies": ["Piece", "pieceStore"],
+      "functions": {
+        "movePiece": { "args": ["coordinates"] },
+        "attackPiece": { "args": ["coordinates", "targetPiece"], "isAsync": true }
+      }
+    }
+  ],
+  "stores": [
+    {
+      "name": "pieceStore",
+      "dependencies": ["dataSource"],
+      "functions": {
+        "savePiecePosition": { "args": ["coordinates"], "isAsync": true },
+        "getPiecePosition": { "args": ["coordinates"], "isAsync": true }
+      }
+    }
+  ],
+  "useCases": [
+    {
+      "name": "trompowskyAttackUseCase",
+      "dependencies": ["pieceInteractor"],
+      "args": ["coordinates"]
+    }
+  ]
+}
